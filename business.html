@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<!--
+  [INPUT]: 依赖 Tailwind CDN、共享视觉/交互资产与 hero、news-mgs、news-sf 本地位图
+  [OUTPUT]: 提供 MGS、PE、SF 三大业务能力及纵向一体化产业流程说明
+  [POS]: 项目根目录的业务详情页，承接首页业务卡片并连接公司与合作入口
+  [PROTOCOL]: 变更时更新此头部，然后检查 AGENTS.md
+-->
+
+<html class="dark" lang="zh-CN">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>业务与产线｜无限电报公司</title><meta content="查看无限电报公司的 MGS 开采、PE 合成、SF 炼化与纵向一体化工业流程。" name="description"/>
+<link href="https://infinite.okethan.com/business.html" rel="canonical"/><link href="assets/images/favicon.webp" rel="icon" type="image/webp"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script src="assets/scripts/tailwind-config.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link href="assets/styles/site.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background site-dots selection:bg-secondary/30">
+<header class="fixed inset-x-0 top-0 z-50 border-b border-outline-variant/30 bg-background/90 backdrop-blur-xl"><div class="mx-auto flex h-20 max-w-site items-center justify-between px-4 md:px-8 lg:px-16"><a class="flex items-center gap-2 font-display text-lg font-bold tracking-tight" href="home.html"><span class="material-symbols-outlined text-secondary">hub</span>INFINITE TELEGRAPH</a><nav aria-label="主导航" class="hidden items-center gap-7 font-mono text-xs uppercase tracking-wider md:flex"><a class="nav-link" href="home.html">Home</a><a class="nav-link" href="company.html">Company</a><a aria-current="page" class="nav-link" href="business.html">Business</a><a class="nav-link" href="news.html">News</a><a class="nav-link" href="investors.html">Investors</a></nav><button aria-expanded="false" aria-label="打开导航" class="border border-outline-variant p-2 text-secondary md:hidden" data-menu-toggle="main"><span class="material-symbols-outlined">menu</span></button></div><nav aria-label="移动导航" class="border-t border-outline-variant/30 bg-surface-container-low px-4 py-5 md:hidden" data-menu="main" hidden="hidden"><div class="grid gap-4 font-mono text-sm uppercase"><a class="nav-link" href="home.html">Home</a><a class="nav-link" href="company.html">Company</a><a aria-current="page" class="nav-link" href="business.html">Business</a><a class="nav-link" href="news.html">News</a><a class="nav-link" href="investors.html">Investors</a></div></nav></header>
+
+<main class="pt-20">
+<section class="relative flex min-h-[68vh] items-end overflow-hidden border-b border-outline-variant/30 scanlines">
+<img alt="深空工业设施" class="absolute inset-0 h-full w-full object-cover opacity-35" src="assets/images/hero.webp"/><div class="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20"></div>
+<div class="relative mx-auto w-full max-w-site px-4 py-20 md:px-8 lg:px-16"><p class="eyebrow mb-5">Industrial System / 03 Sectors</p><h1 class="display-title max-w-5xl text-5xl md:text-7xl">三项业务。<br/><span class="text-secondary">一条完整工业链。</span></h1><p class="mt-7 max-w-2xl text-lg leading-8 text-on-surface-variant">从资源进入系统，到材料完成加工，再到燃料与化工产出，每一阶段都为下一阶段减少不确定性。</p></div>
+</section>
+
+<section class="mx-auto max-w-site px-4 py-24 md:px-8 lg:px-16" id="pipeline"><div class="mb-14 max-w-2xl"><p class="eyebrow">Standard Industrial Flow</p><h2 class="mt-4 font-display text-4xl font-semibold">纵向一体化流程</h2></div><div class="grid items-stretch gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
+<a class="industrial-card hud-corners p-7" href="#mgs"><p class="eyebrow">Phase 01</p><h3 class="mt-4 text-2xl font-semibold">资源开采 / MGS</h3><p class="mt-3 leading-7 text-on-surface-variant">建立可持续的原材料入口。</p></a><span class="material-symbols-outlined self-center justify-self-center rotate-90 text-3xl text-secondary md:rotate-0">double_arrow</span>
+<a class="industrial-card hud-corners border-secondary/60 p-7 shadow-signal" href="#pe"><p class="eyebrow">Phase 02</p><h3 class="mt-4 text-2xl font-semibold">工业加工 / PE</h3><p class="mt-3 leading-7 text-on-surface-variant">把资源转化为建设能力。</p></a><span class="material-symbols-outlined self-center justify-self-center rotate-90 text-3xl text-secondary md:rotate-0">double_arrow</span>
+<a class="industrial-card hud-corners p-7" href="#sf"><p class="eyebrow">Phase 03</p><h3 class="mt-4 text-2xl font-semibold">炼化合成 / SF</h3><p class="mt-3 leading-7 text-on-surface-variant">为运输与持续运转提供能源。</p></a>
+</div></section>
+
+<section class="border-y border-outline-variant/30 bg-surface-container-low">
+<article class="mx-auto grid max-w-site gap-12 px-4 py-24 md:grid-cols-12 md:px-8 lg:px-16" id="mgs"><div class="md:col-span-5"><img alt="MGS 自动化开采产线" class="aspect-video w-full border border-outline-variant/40 object-cover opacity-80" src="assets/images/news-mgs.webp"/></div><div class="md:col-span-7"><p class="eyebrow">Capability 01 / MGS</p><h2 class="mt-4 font-display text-4xl font-semibold">稳定供给，从开采开始。</h2><p class="mt-6 max-w-2xl leading-8 text-on-surface-variant">MGS 板块负责镁矿石自动开采与物理离析，为后续加工提供高纯度原材料。持续、可预测的输入是这套系统的核心指标，单次高产量无法替代稳定性。</p><dl class="mt-8 grid gap-4 sm:grid-cols-2"><div class="border-l-2 border-primary bg-background p-5"><dt class="eyebrow">Role</dt><dd class="mt-2">原材料入口</dd></div><div class="border-l-2 border-primary bg-background p-5"><dt class="eyebrow">Focus</dt><dd class="mt-2">自动化与纯度控制</dd></div></dl></div></article>
+</section>
+
+<section class="mx-auto grid max-w-site gap-12 px-4 py-24 md:grid-cols-12 md:px-8 lg:px-16" id="pe"><div class="md:col-span-7"><p class="eyebrow">Capability 02 / PE</p><h2 class="mt-4 font-display text-4xl font-semibold">把原料变成建设能力。</h2><p class="mt-6 max-w-2xl leading-8 text-on-surface-variant">PE 板块专注高分子聚合物的精确合成，通过多级催化反应生产适用于深空建设的聚乙烯材料。它是资源价值真正被放大的中间层。</p><dl class="mt-8 grid gap-4 sm:grid-cols-2"><div class="border-l-2 border-secondary bg-surface-container p-5"><dt class="eyebrow">Role</dt><dd class="mt-2">工业价值转换</dd></div><div class="border-l-2 border-secondary bg-surface-container p-5"><dt class="eyebrow">Focus</dt><dd class="mt-2">精确合成与材料稳定</dd></div></dl></div><div class="md:col-span-5"><img alt="工业加工与合成设施" class="aspect-video w-full border border-outline-variant/40 object-cover opacity-80" src="assets/images/news-park.webp"/></div></section>
+
+<section class="border-y border-outline-variant/30 bg-surface-container-low"><article class="mx-auto grid max-w-site gap-12 px-4 py-24 md:grid-cols-12 md:px-8 lg:px-16" id="sf"><div class="md:col-span-5"><img alt="SF 炼化生产设施" class="aspect-video w-full border border-outline-variant/40 object-cover opacity-80" src="assets/images/news-sf.webp"/></div><div class="md:col-span-7"><p class="eyebrow">Capability 03 / SF</p><h2 class="mt-4 font-display text-4xl font-semibold">让航线持续，让系统不停。</h2><p class="mt-6 max-w-2xl leading-8 text-on-surface-variant">SF 板块承担深空燃料与润滑油生产，为多星系运输提供持续能源保障。它让工业链的最终产出重新成为运输与扩张的动力。</p><dl class="mt-8 grid gap-4 sm:grid-cols-2"><div class="border-l-2 border-tertiary bg-background p-5"><dt class="eyebrow">Role</dt><dd class="mt-2">能源与炼化出口</dd></div><div class="border-l-2 border-tertiary bg-background p-5"><dt class="eyebrow">Focus</dt><dd class="mt-2">连续运转与航线保障</dd></div></dl></div></article></section>
+
+<section class="mx-auto max-w-site px-4 py-24 md:px-8 lg:px-16"><div class="hud-corners flex flex-col gap-7 border border-secondary/50 bg-surface-container p-8 md:flex-row md:items-center md:justify-between md:p-12"><div><p class="eyebrow">Industrial Cooperation</p><h2 class="mt-3 font-display text-3xl font-semibold">连接产能，谈实际合作。</h2></div><a class="signal-link border border-secondary bg-secondary px-6 py-4 text-on-secondary hover:bg-transparent hover:text-secondary" href="home.html#contact">联系 River-lee <span>→</span></a></div></section>
+</main>
+<footer class="border-t border-outline-variant/30 bg-surface-container-lowest"><div class="mx-auto grid max-w-site gap-10 px-4 py-14 md:grid-cols-12 md:px-8 lg:px-16"><div class="md:col-span-7"><p class="font-display text-lg font-bold">INFINITE TELEGRAPH</p><p class="mt-3 text-on-surface-variant">Industrial Realism in Deep Space Logistics.</p></div><div class="md:col-span-5 md:text-right"><p class="font-mono text-xs uppercase tracking-wider text-on-surface-variant">Game Contact</p><p class="mt-2 text-secondary">River-lee</p></div></div><div class="border-t border-outline-variant/20 py-6 text-center font-mono text-xs text-on-surface-variant">© 2026 Infinite Telegraph Company. All Rights Reserved.</div></footer>
+<script src="assets/scripts/site.js"></script>
+</body></html>

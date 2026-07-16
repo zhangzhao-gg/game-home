@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+
+<!--
+  [INPUT]: 依赖 Tailwind CDN、Google Fonts，以及 assets/images/ 下的本地页面位图
+  [OUTPUT]: 提供无限电报公司官网首页门户，展示核心摘要并导流公司、业务、新闻与投资者独立页面
+  [POS]: 项目根目录的主页面入口，保留品牌总览并作为多页面信息架构的导航中心
+  [PROTOCOL]: 变更时更新此头部，然后检查 AGENTS.md
+-->
+
+<html class="dark" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>无限电报公司｜星际工业与资源加工</title>
+<meta content="Infinite Telegraph Company（无限电报公司），立足星际资源，构建稳定工业产线，专注 MGS、PE 与 SF 三大核心业务。" name="description"/>
+<link href="https://infinite.okethan.com/" rel="canonical"/>
+<link href="assets/images/favicon.webp" rel="icon" type="image/webp"/>
+<link href="assets/images/favicon.webp" rel="apple-touch-icon"/>
+<meta content="website" property="og:type"/>
+<meta content="无限电报公司｜星际工业与资源加工" property="og:title"/>
+<meta content="立足星际资源，构建稳定工业产线，专注 MGS、PE 与 SF 三大核心业务。" property="og:description"/>
+<meta content="https://infinite.okethan.com/" property="og:url"/>
+<meta content="无限电报公司" property="og:site_name"/>
+<meta content="zh_CN" property="og:locale"/>
+<meta content="https://infinite.okethan.com/assets/images/share-card.webp?v=20260716" property="og:image"/>
+<meta content="image/webp" property="og:image:type"/>
+<meta content="512" property="og:image:width"/>
+<meta content="512" property="og:image:height"/>
+<meta content="无限电报公司通信与工业网络标志" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="无限电报公司｜星际工业与资源加工" name="twitter:title"/>
+<meta content="立足星际资源，构建稳定工业产线。" name="twitter:description"/>
+<meta content="https://infinite.okethan.com/assets/images/share-card.webp?v=20260716" name="twitter:image"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#ffdad6",
+                    "surface-container-high": "#282a2c",
+                    "secondary-container": "#604403",
+                    "surface": "#111415",
+                    "tertiary-fixed-dim": "#6fd7d6",
+                    "on-tertiary-container": "#139090",
+                    "secondary": "#e9c176",
+                    "outline-variant": "#44474d",
+                    "surface-container-highest": "#333537",
+                    "primary": "#b9c7e4",
+                    "surface-container-lowest": "#0c0e10",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "inverse-primary": "#515f78",
+                    "outline": "#8f9097",
+                    "surface-bright": "#37393b",
+                    "surface-container-low": "#1a1c1d",
+                    "surface-container": "#1e2021",
+                    "on-secondary-container": "#dab36a",
+                    "tertiary-container": "#001d1d",
+                    "on-tertiary-fixed": "#002020",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed": "#261900",
+                    "surface-variant": "#333537",
+                    "on-background": "#e2e2e4",
+                    "primary-fixed-dim": "#b9c7e4",
+                    "secondary-fixed": "#ffdea5",
+                    "on-primary": "#233148",
+                    "primary-fixed": "#d6e3ff",
+                    "background": "#111415",
+                    "surface-tint": "#b9c7e4",
+                    "tertiary": "#6fd7d6",
+                    "inverse-surface": "#e2e2e4",
+                    "on-primary-fixed-variant": "#39475f",
+                    "on-secondary": "#412d00",
+                    "on-primary-fixed": "#0d1c32",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed": "#8cf3f3",
+                    "on-primary-container": "#74829d",
+                    "on-surface": "#e2e2e4",
+                    "on-surface-variant": "#c5c6cd",
+                    "primary-container": "#0a192f",
+                    "on-error": "#690005",
+                    "on-tertiary": "#003737",
+                    "inverse-on-surface": "#2f3132",
+                    "secondary-fixed-dim": "#e9c176",
+                    "surface-dim": "#111415",
+                    "on-tertiary-fixed-variant": "#004f4f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "label-md": ["JetBrains Mono"],
+                    "body-md": ["Work Sans"],
+                    "headline-lg": ["Inter"],
+                    "label-sm": ["JetBrains Mono"],
+                    "headline-sm": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Work Sans"],
+                    "display-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        [id] {
+            scroll-margin-top: 96px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .industrial-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(10, 25, 47, 0.7);
+        }
+        .telemetry-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #c5a059, transparent);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(245, 245, 247, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: #c5a059;
+            transform: translateY(-4px);
+        }
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(185, 199, 228, 0.5), transparent);
+            transform: translateX(-100%);
+            animation: scan-line 4s linear infinite;
+        }
+        @keyframes scan-line {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .hex-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(143, 144, 151, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .tech-grid {
+            background-image: linear-gradient(rgba(185, 199, 228, 0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(185, 199, 228, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .parallax-data {
+            will-change: transform;
+            transition: transform 0.2s ease-out;
+        }
+        .glitch-overlay {
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 2px);
+            pointer-events: none;
+            opacity: 0.3;
+        }
+        .hud-border {
+            position: relative;
+        }
+        .hud-border::after {
+            content: '';
+            position: absolute;
+            top: -2px; right: -2px;
+            width: 10px; height: 10px;
+            border-top: 2px solid #e9c176;
+            border-right: 2px solid #e9c176;
+        }
+        .hud-border::before {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: -2px;
+            width: 10px; height: 10px;
+            border-bottom: 2px solid #e9c176;
+            border-left: 2px solid #e9c176;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background hex-bg selection:bg-secondary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/10">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<a aria-label="返回首页" class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tighter flex items-center gap-2" href="#home">
+<span class="material-symbols-outlined text-secondary">hub</span>
+            INFINITE TELEGRAPH
+        </a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 transition-colors duration-300" href="#home">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="company.html">Profile</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="business.html">Business</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="business.html#pipeline">Layout</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="news.html">News</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="investors.html">Investors</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<a class="hidden bg-secondary text-on-secondary px-6 py-2.5 font-label-md text-label-md uppercase tracking-wider hover:opacity-80 transition-opacity md:block" href="#contact">
+            Cooperation Inquiry
+        </a>
+<button aria-expanded="false" aria-label="打开导航" class="border border-outline-variant p-2 text-secondary md:hidden" data-menu-toggle="home-main" type="button"><span class="material-symbols-outlined">menu</span></button>
+</div>
+<div class="border-t border-outline-variant/30 bg-surface-container-low px-4 py-5 md:hidden" data-menu="home-main" hidden="hidden">
+<div class="grid gap-4 font-label-md text-label-md uppercase tracking-wider">
+<a class="text-secondary" href="#home">Home</a><a class="text-on-surface-variant" href="company.html">Company</a><a class="text-on-surface-variant" href="business.html">Business</a><a class="text-on-surface-variant" href="news.html">News</a><a class="text-on-surface-variant" href="investors.html">Investors</a><a class="text-on-surface-variant" href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden tech-grid" id="home">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 mix-blend-luminosity" src="assets/images/hero.webp"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+<div class="glitch-overlay"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8">
+<div class="flex flex-wrap gap-3 mb-8">
+<span class="bg-surface-container-highest/60 border border-secondary/30 px-4 py-1.5 font-label-sm text-label-sm uppercase tracking-widest text-secondary hud-border">CEO: River-lee</span>
+<span class="bg-surface-container-highest/60 border border-primary/30 px-4 py-1.5 font-label-sm text-label-sm uppercase tracking-widest text-primary">估值: 4,000万</span>
+<span class="bg-surface-container-highest/60 border border-tertiary/30 px-4 py-1.5 font-label-sm text-label-sm uppercase tracking-widest text-tertiary flex items-center gap-2">
+<span class="w-2 h-2 bg-tertiary rounded-full animate-pulse shadow-[0_0_8px_rgba(111,215,214,0.8)]"></span>
+                        状态: 扩张中
+                    </span>
+</div>
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">
+                    立足星际资源<br/>
+<span class="text-primary tracking-widest relative">构建稳定工业产线
+                        <span class="absolute -bottom-2 left-0 w-1/3 h-1 bg-secondary"></span>
+</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12 border-l-2 border-outline-variant/30 pl-6">
+                    专注于 MGS 开采与提炼、PE 聚乙烯合成加工、SF 炼油提炼与合成，由 CEO River-lee 负责经营，持续推进公司稳定扩张。
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-secondary text-on-secondary px-8 py-4 font-label-md text-label-md uppercase tracking-widest hover:brightness-110 transition-all shadow-[0_4px_20px_rgba(233,193,118,0.2)]" href="business.html">
+                        查看主营业务
+                    </a>
+<a class="border border-outline px-8 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-white/5 transition-all" href="news.html">
+                        查看公司动态
+                    </a>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent"></div>
+</section>
+<!-- Dynamic Data Section (Parallax Scrolling) -->
+<section class="py-12 bg-surface-container-low overflow-hidden border-y border-outline-variant/10">
+<div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-8 xl:gap-10 py-10" id="data-track">
+<div class="parallax-data min-w-0 flex flex-col" data-speed="0.05">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-tighter border-b border-outline-variant pb-2 mb-4">Market Valuation</span>
+<span class="font-headline-lg text-headline-lg text-secondary">4,000万</span>
+<span class="font-label-sm text-label-sm text-outline mt-2">MKT.VAL // 0x4F2A</span>
+</div>
+<div class="parallax-data min-w-0 flex flex-col" data-speed="-0.03">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-tighter border-b border-outline-variant pb-2 mb-4">Operations Head</span>
+<span class="font-headline-lg text-headline-lg text-primary">River-lee</span>
+<span class="font-label-sm text-label-sm text-outline mt-2">EXEC_ID // LVL_09</span>
+</div>
+<div class="parallax-data min-w-0 flex flex-col" data-speed="0.07">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-tighter border-b border-outline-variant pb-2 mb-4">Funding Round</span>
+<span class="font-headline-lg text-headline-lg text-tertiary">天使轮完成</span>
+<span class="font-label-sm text-label-sm text-outline mt-2">ANGEL_ROUND // SECURE</span>
+</div>
+<div class="parallax-data min-w-0 flex flex-col" data-speed="-0.05">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-tighter border-b border-outline-variant pb-2 mb-4">Core Sectors</span>
+<span class="font-headline-lg text-headline-lg text-on-surface">3大板块</span>
+<span class="font-label-sm text-label-sm text-outline mt-2">DIV_COUNT // ACTIVE</span>
+</div>
+<div class="parallax-data min-w-0 flex flex-col" data-speed="0.04">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-tighter border-b border-outline-variant pb-2 mb-4">Current Phase</span>
+<span class="font-headline-lg text-headline-lg text-secondary">扩张中</span>
+<span class="font-label-sm text-label-sm text-outline mt-2">PROC_STATUS // BUSY</span>
+</div>
+<div class="parallax-data min-w-0 flex flex-col" data-speed="-0.02">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-tighter border-b border-outline-variant pb-2 mb-4">Philosophy</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">稳定经营</span>
+<span class="font-label-sm text-label-sm text-outline mt-2">CORE_LOGIC // STABLE</span>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-32 px-margin-desktop max-w-container-max mx-auto relative overflow-hidden" id="about">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 order-2 md:order-1">
+<h2 class="font-headline-lg text-headline-lg mb-8 flex items-center gap-4">
+<span class="w-12 h-[2px] bg-secondary"></span>
+                    关于无限电报公司
+                </h2>
+<div class="space-y-6 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+                        Infinite Telegraph Company（无限电报公司）深耕星际工业物流与资源深加工。我们开采资源，也建设工业文明赖以运转的基础。
+                    </p>
+<p>
+                        我们坚持以“工业现实主义”为核心经营理念，摒弃华而不实的扩张，专注于打磨稳固的供应链体系。从最基础的矿石挖掘到高精尖的化学合成，每一道工序都体现了我们对效率与精密的不懈追求。
+                    </p>
+<p>
+                        在 CEO River-lee 的领导下，公司已建立起横跨多个星系的物流与加工网络，通过垂直整合三大核心业务板块，确保了在复杂市场环境下的强大抗风险能力与持续盈利增长。
+                    </p>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7 order-1 md:order-2">
+<div class="relative group">
+<div class="absolute -inset-4 border border-secondary/20 group-hover:border-secondary/50 transition-colors duration-500 z-10"></div>
+<!-- Portrait with digital effects -->
+<div class="relative overflow-hidden">
+<img class="w-full aspect-square object-cover grayscale brightness-90 group-hover:grayscale-0 transition-all duration-700" src="assets/images/portrait.webp"/>
+<div class="glitch-overlay opacity-50"></div>
+<!-- HUD Elements Overlay -->
+<div class="absolute top-4 left-4 font-label-sm text-[10px] text-secondary flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span>SCANNING_BIO_ID... OK</span>
+<span>VITALS: STABLE</span>
+<span>ACCESS_LEVEL: 0x01</span>
+</div>
+</div>
+<div class="absolute bottom-4 right-4 bg-background/90 backdrop-blur px-4 py-2 border-l-2 border-secondary hud-border">
+<p class="font-label-md text-label-md">EXECUTIVE PORTRAIT // RIVER-LEE</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Business Sectors (Minimalist Aesthetic) -->
+<section class="py-32 px-margin-desktop max-w-container-max mx-auto bg-surface-container-lowest/50" id="business">
+<div class="text-center mb-20">
+<h2 class="font-display-lg text-display-lg mb-4">核心业务板块</h2>
+<p class="font-label-md text-label-md text-secondary uppercase tracking-[0.3em] flex items-center justify-center gap-4">
+<span class="w-8 h-[1px] bg-outline-variant"></span>
+                Core Industrial Capabilities
+                <span class="w-8 h-[1px] bg-outline-variant"></span>
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Sector 1 -->
+<div class="glass-card group p-10 border-l-4 border-l-primary/30 hover:border-l-primary transition-all duration-500" id="mgs">
+<div class="font-label-sm text-label-sm text-primary mb-2 opacity-60">CAPABILITY_01</div>
+<h3 class="font-headline-sm text-headline-sm mb-6">MGS 开采与提炼</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 leading-relaxed">
+                    高效的镁矿石自动开采系统，结合先进的物理离析技术，为后续工业链提供高纯度原材料。
+                </p>
+<div class="telemetry-line mb-8 opacity-30 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center font-label-sm text-label-sm uppercase tracking-wider">
+<span class="text-on-surface-variant/70">Efficiency</span>
+<span class="text-secondary">98.4%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest">
+<div class="h-full bg-secondary w-[98%] transition-all duration-1000"></div>
+</div>
+</div>
+<a class="mt-8 inline-flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-wider text-primary hover:text-secondary" href="business.html#mgs">查看业务详情 <span>→</span></a>
+</div>
+<!-- Sector 2 -->
+<div class="glass-card group p-10 border-l-4 border-l-secondary/30 hover:border-l-secondary transition-all duration-500" id="pe">
+<div class="font-label-sm text-label-sm text-secondary mb-2 opacity-60">CAPABILITY_02</div>
+<h3 class="font-headline-sm text-headline-sm mb-6">PE 聚乙烯合成加工</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 leading-relaxed">
+                    专注于高分子聚合物的精确合成，通过多级催化反应生产适用于深空建设的高强度聚乙烯材料。
+                </p>
+<div class="telemetry-line mb-8 opacity-30 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center font-label-sm text-label-sm uppercase tracking-wider">
+<span class="text-on-surface-variant/70">Purity</span>
+<span class="text-secondary">99.9%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest">
+<div class="h-full bg-secondary w-[99%] transition-all duration-1000"></div>
+</div>
+</div>
+<a class="mt-8 inline-flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-wider text-secondary hover:text-on-surface" href="business.html#pe">查看业务详情 <span>→</span></a>
+</div>
+<!-- Sector 3 -->
+<div class="glass-card group p-10 border-l-4 border-l-tertiary/30 hover:border-l-tertiary transition-all duration-500" id="sf">
+<div class="font-label-sm text-label-sm text-tertiary mb-2 opacity-60">CAPABILITY_03</div>
+<h3 class="font-headline-sm text-headline-sm mb-6">SF 炼油提炼与合成</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 leading-relaxed">
+                    深空燃料与润滑油的核心生产线，满足多星系长途运输的能源需求，保障航线不间断运转。
+                </p>
+<div class="telemetry-line mb-8 opacity-30 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center font-label-sm text-label-sm uppercase tracking-wider">
+<span class="text-on-surface-variant/70">Refinery Tech</span>
+<span class="text-secondary">v4.0</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest">
+<div class="h-full bg-secondary w-[85%] transition-all duration-1000"></div>
+</div>
+</div>
+<a class="mt-8 inline-flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-wider text-tertiary hover:text-secondary" href="business.html#sf">查看业务详情 <span>→</span></a>
+</div>
+</div>
+</section>
+<!-- Industrial Layout Diagram -->
+<section class="py-32 bg-surface-container relative tech-grid" id="layout">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16 border-l-4 border-secondary pl-6">
+<h2 class="font-headline-lg text-headline-lg">产业布局流程</h2>
+<p class="font-label-md text-label-md text-on-surface-variant">Standard Industrial Flow Diagram</p>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-12 relative">
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-outline-variant/30 hidden md:block z-0"></div>
+<div class="relative z-10 bg-surface border border-outline-variant p-8 w-full md:w-1/4 hud-border">
+<div class="font-label-sm text-label-sm text-secondary mb-4">PHASE 01</div>
+<h4 class="font-headline-sm text-headline-sm mb-2">资源开采 (MGS)</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Raw material extraction from planetary crust.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-4xl transform md:rotate-0 rotate-90 animate-pulse">double_arrow</span>
+<div class="relative z-10 bg-surface border border-secondary p-8 w-full md:w-1/4 shadow-[0_0_30px_rgba(197,160,89,0.1)] hud-border">
+<div class="font-label-sm text-label-sm text-secondary mb-4">PHASE 02</div>
+<h4 class="font-headline-sm text-headline-sm mb-2">工业加工 (PE)</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Polymer synthesis and module manufacturing.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-4xl transform md:rotate-0 rotate-90 animate-pulse">double_arrow</span>
+<div class="relative z-10 bg-surface border border-outline-variant p-8 w-full md:w-1/4 hud-border">
+<div class="font-label-sm text-label-sm text-secondary mb-4">PHASE 03</div>
+<h4 class="font-headline-sm text-headline-sm mb-2">炼化合成 (SF)</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Fuel refining and chemical byproduct creation.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- News & IR Section -->
+<section class="py-32 px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter" id="news">
+<div class="md:col-span-7 lg:col-span-8">
+<h2 class="font-headline-lg text-headline-lg mb-12">公司动态</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<a class="group relative block" href="news.html#mgs">
+<div class="mb-4 overflow-hidden border border-outline-variant/30">
+<img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100" src="assets/images/news-mgs.webp"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">2026.07.15</span>
+<h3 class="font-headline-sm text-headline-sm mt-2 group-hover:text-primary transition-colors">MGS 开采产线完成全自动化升级</h3>
+</a>
+<a class="group relative block" href="news.html#sf">
+<div class="mb-4 overflow-hidden border border-outline-variant/30">
+<img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100" src="assets/images/news-sf.webp"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">2026.07.14</span>
+<h3 class="font-headline-sm text-headline-sm mt-2 group-hover:text-primary transition-colors">SF 炼化板块月产值突破预期目标</h3>
+</a>
+<a class="group relative block" href="news.html#funding">
+<div class="mb-4 overflow-hidden border border-outline-variant/30">
+<img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100" src="assets/images/news-funding.webp"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">2026.07.16</span>
+<h3 class="font-headline-sm text-headline-sm mt-2 group-hover:text-primary transition-colors">天使轮融资顺利完成，公司估值达到4,000万</h3>
+</a>
+<a class="group relative block" href="news.html#park">
+<div class="mb-4 overflow-hidden border border-outline-variant/30">
+<img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100" src="assets/images/news-park.webp"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">2026.07.17</span>
+<h3 class="font-headline-sm text-headline-sm mt-2 group-hover:text-primary transition-colors">全新星际工业园区选址工作启动</h3>
+</a>
+</div>
+</div>
+<aside class="md:col-span-5 lg:col-span-4 bg-surface-container-low p-6 lg:p-8 border border-outline-variant/20 h-fit md:sticky md:top-32 hud-border" id="investors">
+<h2 class="font-headline-sm text-headline-sm mb-8 border-b border-outline-variant pb-4 uppercase tracking-wider flex items-center justify-between">
+                投资者关系 (IR)
+                <span class="material-symbols-outlined text-secondary animate-pulse">monitoring</span>
+</h2>
+<div class="space-y-8">
+<article class="border border-outline-variant/60 bg-surface-container p-4 hud-border" aria-labelledby="investor-galadene-name">
+<div class="flex items-center gap-4">
+<div class="relative size-20 shrink-0 overflow-hidden border border-secondary/70 bg-background">
+<img alt="个人投资人加拉迪恩 Galadene 的头像" class="h-full w-full object-cover" loading="lazy" src="assets/images/investor-galadene.webp"/>
+<div class="glitch-overlay"></div>
+</div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1">Personal Investor</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface break-words" id="investor-galadene-name">加拉迪恩 <span class="text-primary">Galadene</span></h3>
+</div>
+</div>
+<dl class="mt-5 grid grid-cols-1 gap-4 border-t border-outline-variant/50 pt-5 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2">
+<div>
+<dt class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Affiliation</dt>
+<dd class="font-body-md text-body-md text-on-surface break-words">SNG&amp;大保哥商行</dd>
+</div>
+<div>
+<dt class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Personal Investment</dt>
+<dd class="font-headline-sm text-headline-sm text-secondary tabular-nums">4,000,000 <span class="font-label-sm text-label-sm">CIS</span></dd>
+</div>
+</dl>
+</article>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Company Valuation</p>
+<p class="font-headline-lg text-headline-lg text-secondary">¥40,000,000</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Investment Status</p>
+<p class="font-body-lg text-body-lg text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                        Angel Round: Completed
+                    </p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Operational Model</p>
+<p class="font-body-lg text-body-lg text-on-surface">Vertical Integration</p>
+</div>
+<a class="block w-full border border-secondary text-secondary py-4 font-label-md text-label-md text-center uppercase tracking-widest hover:bg-secondary hover:text-on-secondary transition-all relative overflow-hidden group" href="investors.html">
+<span class="relative z-10">Full Investor Relations</span>
+<div class="absolute inset-0 bg-secondary/10 translate-y-full group-hover:translate-y-0 transition-transform"></div>
+</a>
+<div class="pt-6 border-t border-outline-variant">
+<p class="font-label-sm text-label-sm text-on-surface-variant italic leading-relaxed">
+                        "We are committed to long-term stability and sustainable industrial expansion within the Prosperous Universe ecosystem."
+                    </p>
+</div>
+</div>
+</aside>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="md:col-span-4">
+<div class="font-headline-sm text-headline-sm text-on-surface mb-6 font-bold tracking-tighter flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">hub</span>
+                INFINITE TELEGRAPH
+            </div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-xs">
+                Industrial Realism in Deep Space Logistics. Standard-setting manufacturing for the new frontier.
+            </p>
+<div class="space-y-2">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Game Contact: <span class="text-secondary">River-lee</span></p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Operational Sector: <span class="text-primary">Outer Rim Industrial</span></p>
+</div>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-md text-label-md text-on-surface font-bold mb-6 uppercase tracking-widest">Solutions</h4>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="business.html#mgs">MGS Mining</a></li>
+<li><a class="hover:text-secondary transition-colors" href="business.html#pe">PE Synthesis</a></li>
+<li><a class="hover:text-secondary transition-colors" href="business.html#sf">SF Refining</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-md text-label-md text-on-surface font-bold mb-6 uppercase tracking-widest">Navigate</h4>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="company.html">Company Profile</a></li>
+<li><a class="hover:text-secondary transition-colors" href="news.html">Company News</a></li>
+<li><a class="hover:text-secondary transition-colors" href="investors.html">Investor Relations</a></li>
+</ul>
+</div>
+<div class="md:col-span-4">
+<h4 class="font-label-md text-label-md text-on-surface font-bold mb-6 uppercase tracking-widest">Game Contact</h4>
+<div class="bg-surface-container p-6 border border-outline-variant/10 hud-border">
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">在 Prosperous Universe 游戏内搜索联系人。</p>
+<div class="flex">
+<code class="bg-background border border-outline-variant w-full px-4 py-2 font-label-md text-label-md text-primary" id="contact-id">River-lee</code>
+<button class="bg-secondary text-on-secondary px-4 py-2 font-label-sm text-label-sm hover:opacity-90 active:scale-95 transition-all" id="copy-contact" type="button">COPY</button>
+</div>
+<p aria-live="polite" class="font-label-sm text-label-sm text-on-surface-variant mt-3" id="copy-status" role="status">点击复制游戏 ID</p>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop py-8 border-t border-outline-variant/5 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+            © 2026 Infinite Telegraph Company. All Rights Reserved. Industrial Realism in Deep Space Logistics.
+        </p>
+<div class="flex gap-6">
+<a aria-label="查看投资者关系" class="text-on-surface-variant hover:text-secondary" href="investors.html"><span class="material-symbols-outlined text-xl">monitoring</span></a>
+<a aria-label="查看产业布局" class="text-on-surface-variant hover:text-secondary" href="business.html#pipeline"><span class="material-symbols-outlined text-xl">settings_input_component</span></a>
+<a aria-label="返回首页" class="text-on-surface-variant hover:text-secondary" href="#home"><span class="material-symbols-outlined text-xl">hub</span></a>
+</div>
+</div>
+</footer>
+<script>
+    // Parallax effect for data section
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const parallaxElements = document.querySelectorAll('.parallax-data');
+
+        parallaxElements.forEach(el => {
+            const speed = el.getAttribute('data-speed');
+            const yPos = -(scrolled * speed);
+            el.style.transform = `translateY(${yPos}px)`;
+        });
+    });
+
+    // 游戏联系人复制
+    const copyButton = document.querySelector('#copy-contact');
+    const copyStatus = document.querySelector('#copy-status');
+
+    copyButton.addEventListener('click', async () => {
+        try {
+            await navigator.clipboard.writeText('River-lee');
+            copyButton.textContent = 'COPIED';
+            copyStatus.textContent = '已复制，可直接在游戏内搜索';
+        } catch {
+            copyStatus.textContent = '复制失败，请手动复制 River-lee';
+        }
+    });
+</script>
+<script src="assets/scripts/site.js"></script>
+</body></html>
