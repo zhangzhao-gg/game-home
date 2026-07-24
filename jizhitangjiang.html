@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<!--
+  [INPUT]: 依赖 Tailwind CDN、共享视觉/交互资产与 wanted-jizhitangjiang.webp 通缉画像
+  [OUTPUT]: 提供急支糖浆的独立通缉档案页，呈现宿敌关系、犯罪记录与追捕状态
+  [POS]: 项目根目录的敌对人物叙事页，由首页关键人物区导流并与 River-lee 人物页形成对照
+  [PROTOCOL]: 变更时更新此头部，然后检查 AGENTS.md
+-->
+
+<html class="dark" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>急支糖浆｜宇宙头号通缉档案｜无限电报公司</title>
+<meta content="查看“塔里木的急支糖浆”通缉档案：River-lee 的头号宿敌、星际商路麻烦制造者，以及多项尚未结案的犯罪记录。" name="description"/>
+<link href="https://infinite.okethan.com/jizhitangjiang.html" rel="canonical"/>
+<link href="assets/images/favicon.webp" rel="icon" type="image/webp"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="assets/scripts/tailwind-config.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="assets/styles/site.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background selection:bg-red-500/30">
+<header class="fixed inset-x-0 top-0 z-50 border-b border-red-500/30 bg-background/90 backdrop-blur-xl">
+<div class="mx-auto flex h-20 max-w-site items-center justify-between px-4 md:px-8 lg:px-16">
+<a class="flex items-center gap-2 font-display text-lg font-bold tracking-tight text-on-surface" href="home.html"><span class="material-symbols-outlined text-red-400">warning</span>INFINITE TELEGRAPH</a>
+<nav aria-label="主导航" class="hidden items-center gap-7 font-mono text-xs uppercase tracking-wider md:flex">
+<a class="nav-link" href="home.html">Home</a><a class="nav-link" href="company.html">Company</a><a class="nav-link" href="business.html">Business</a><a class="nav-link" href="news.html">News</a><a class="nav-link" href="investors.html">Investors</a>
+</nav>
+<button aria-expanded="false" aria-label="打开导航" class="border border-red-500/50 p-2 text-red-400 md:hidden" data-menu-toggle="wanted-main"><span class="material-symbols-outlined">menu</span></button>
+</div>
+<nav aria-label="移动导航" class="border-t border-red-500/30 bg-surface-container-low px-4 py-5 md:hidden" data-menu="wanted-main" hidden="hidden">
+<div class="grid gap-4 font-mono text-sm uppercase"><a class="nav-link" href="home.html">Home</a><a class="nav-link" href="company.html">Company</a><a class="nav-link" href="business.html">Business</a><a class="nav-link" href="news.html">News</a><a class="nav-link" href="investors.html">Investors</a></div>
+</nav>
+</header>
+
+<main class="pt-20">
+<!-- ==================== WANTED / HERO ==================== -->
+<section class="relative overflow-hidden border-b border-red-500/40 site-grid">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_76%_38%,rgba(239,68,68,0.18),transparent_34%)]"></div>
+<div class="absolute left-0 top-20 font-mono text-[18vw] font-bold leading-none text-red-500/[0.035]">WANTED</div>
+<div class="relative mx-auto grid min-h-[86vh] max-w-site items-center gap-14 px-4 py-20 md:grid-cols-12 md:px-8 lg:px-16">
+<div class="md:col-span-7">
+<div class="mb-7 flex items-center gap-3"><span class="h-2 w-2 animate-pulse bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]"></span><p class="font-mono text-xs uppercase tracking-[0.22em] text-red-400">Interstellar Most Wanted / Rank 01</p></div>
+<p class="font-mono text-sm uppercase tracking-[0.24em] text-secondary">Alias: 塔里木的急支糖浆</p>
+<h1 class="mt-4 display-title text-5xl text-on-surface md:text-8xl">急支糖浆</h1>
+<p class="mt-8 max-w-3xl font-display text-2xl font-semibold leading-tight text-on-surface md:text-4xl">全宇宙都在找。<br/><span class="text-red-400">本人也经常找不到自己停船的位置。</span></p>
+<p class="mt-8 max-w-2xl text-lg leading-8 text-on-surface-variant">River-lee 的头号宿敌，工业航线的常驻麻烦，以及星际执法系统里少数能让危险等级与事故频率同时爆表的名字。</p>
+<a class="signal-link mt-10 border border-red-500 bg-red-500 px-6 py-4 text-white hover:bg-transparent hover:text-red-400" href="#record">读取犯罪记录 <span aria-hidden="true">↓</span></a>
+</div>
+<div class="md:col-span-5">
+<figure class="relative overflow-hidden border-2 border-red-500/70 bg-surface-container-low shadow-[0_0_50px_rgba(239,68,68,0.14)] scanlines">
+<div class="absolute right-4 top-4 z-10 rotate-3 border-2 border-red-500 bg-background/85 px-4 py-2 font-mono text-sm font-bold uppercase tracking-[0.2em] text-red-400">Wanted</div>
+<img alt="宇宙头号通缉犯急支糖浆的黄猫画像" class="aspect-[4/5] w-full object-cover object-top" src="assets/images/wanted-jizhitangjiang.webp"/>
+<figcaption class="flex justify-between border-t border-red-500/40 p-4 font-mono text-xs uppercase tracking-wider text-on-surface-variant"><span>Dossier / TARIM-01</span><span class="text-red-400">Do Not Cough</span></figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<!-- ==================== DOSSIER STRIP ==================== -->
+<section class="border-b border-outline-variant/30 bg-surface-container-low">
+<dl class="mx-auto grid max-w-site gap-px bg-outline-variant/40 md:grid-cols-4">
+<div class="bg-surface-container-low p-7 md:px-8"><dt class="font-mono text-xs uppercase tracking-widest text-red-400">Threat Level</dt><dd class="mt-3 text-xl">极高，可信度另议</dd></div>
+<div class="bg-surface-container-low p-7 md:px-8"><dt class="font-mono text-xs uppercase tracking-widest text-red-400">Arch-rival</dt><dd class="mt-3 text-xl text-secondary">CEO River-lee</dd></div>
+<div class="bg-surface-container-low p-7 md:px-8"><dt class="font-mono text-xs uppercase tracking-widest text-red-400">Known Prop</dt><dd class="mt-3 text-xl">绿色糖浆瓶</dd></div>
+<div class="bg-surface-container-low p-7 md:px-8"><dt class="font-mono text-xs uppercase tracking-widest text-red-400">Last Seen</dt><dd class="mt-3 text-xl">“刚才还在这儿”</dd></div>
+</dl>
+</section>
+
+<!-- ==================== RECORD ==================== -->
+<section class="mx-auto max-w-site px-4 py-28 md:px-8 lg:px-16" id="record">
+<div class="mb-16 grid gap-8 md:grid-cols-12">
+<div class="md:col-span-5"><p class="font-mono text-xs uppercase tracking-[0.2em] text-red-400">Selected Incidents</p><h2 class="mt-5 display-title text-4xl md:text-6xl">罪证确凿。<br/><span class="text-red-400">动机令人困惑。</span></h2></div>
+<div class="md:col-span-7 md:pt-8"><p class="max-w-3xl text-xl leading-9 text-on-surface-variant">急支糖浆专门袭扰无限电报的无人货运线路、补给舰与工业商队。每次行动都准备周密，唯一的问题是计划通常在本人开始执行之后才第一次被本人看见。</p></div>
+</div>
+<div class="grid gap-6 md:grid-cols-3">
+<article class="border border-red-500/30 bg-surface-container-low p-8 transition hover:-translate-y-1 hover:border-red-500/70"><p class="font-mono text-xs uppercase tracking-widest text-red-400">Case 01 / Piracy</p><h3 class="mt-5 font-display text-2xl font-semibold">抢夺货运飞船</h3><p class="mt-5 leading-8 text-on-surface-variant">多次拦截深空货运飞船，劫走燃料、矿物与补给箱；事后还试图向受害船队索要“加班拦截费”。</p></article>
+<article class="border border-red-500/30 bg-surface-container-low p-8 transition hover:-translate-y-1 hover:border-red-500/70"><p class="font-mono text-xs uppercase tracking-widest text-red-400">Case 02 / Sabotage</p><h3 class="mt-5 font-display text-2xl font-semibold">炸毁城市外环</h3><p class="mt-5 leading-8 text-on-surface-variant">涉嫌破坏边境城市的外环能源塔，导致整片港区停摆三十六小时。官方评价：危险，混乱，且报复心极强。</p></article>
+<article class="border border-red-500/30 bg-surface-container-low p-8 transition hover:-translate-y-1 hover:border-red-500/70"><p class="font-mono text-xs uppercase tracking-widest text-red-400">Case 03 / Convoy</p><h3 class="mt-5 font-display text-2xl font-semibold">伏击工业商队</h3><p class="mt-5 leading-8 text-on-surface-variant">成功潜伏十二小时，却把眼镜上的雾当成星云，追错方向。商队毫发无损，逃犯本人提交了燃料报销申请。</p></article>
+</div>
+</section>
+
+<!-- ==================== RIVALRY ==================== -->
+<section class="relative overflow-hidden border-y border-red-500/30 bg-surface-container-low scanlines">
+<div class="mx-auto grid max-w-site gap-12 px-4 py-28 md:grid-cols-12 md:px-8 lg:px-16">
+<div class="md:col-span-4"><p class="font-mono text-xs uppercase tracking-[0.2em] text-red-400">The Rivalry</p><h2 class="mt-5 display-title text-4xl md:text-5xl">一场宿命对决。<br/>至少有一方这么认为。</h2></div>
+<div class="md:col-span-8"><p class="font-display text-2xl font-medium leading-relaxed text-on-surface md:text-3xl">急支糖浆坚信自己是 River-lee 唯一的宿敌。River-lee 对此没有公开回应，只要求所有仓库更新门锁，并禁止把绿色瓶装液体带进董事会。</p><div class="mt-10 flex flex-wrap gap-4"><a class="signal-link border border-secondary px-6 py-4 text-secondary hover:bg-secondary hover:text-on-secondary" href="river-lee.html">查看宿敌档案 <span aria-hidden="true">→</span></a><a class="signal-link border border-outline-variant px-6 py-4 text-on-surface-variant hover:border-red-500 hover:text-red-400" href="home.html#leadership">返回关键人物 <span aria-hidden="true">→</span></a></div></div>
+</div>
+</section>
+
+<section class="mx-auto max-w-4xl px-4 py-24 text-center md:px-8">
+<p class="font-mono text-xs uppercase tracking-[0.2em] text-red-400">Public Safety Notice</p>
+<p class="mt-6 font-display text-3xl font-semibold">如发现目标，请勿靠近。</p>
+<p class="mx-auto mt-5 max-w-2xl leading-8 text-on-surface-variant">尤其不要问“你这糖浆保真吗”。上一个提问者听了四小时创业计划，现在仍在恢复。</p>
+</section>
+</main>
+
+<footer class="border-t border-red-500/30 bg-surface-container-lowest">
+<div class="mx-auto grid max-w-site gap-10 px-4 py-14 md:grid-cols-12 md:px-8 lg:px-16"><div class="md:col-span-7"><p class="font-display text-lg font-bold">INFINITE TELEGRAPH // SECURITY BULLETIN</p><p class="mt-3 text-on-surface-variant">档案持续更新。未经授权，请勿接触目标及其随身绿色瓶装物。</p></div><div class="md:col-span-5 md:text-right"><p class="font-mono text-xs uppercase tracking-wider text-red-400">Dossier Status</p><p class="mt-2">OPEN / UNFORTUNATELY</p></div></div>
+<div class="border-t border-outline-variant/20 py-6 text-center font-mono text-xs text-on-surface-variant">© 2026 Infinite Telegraph Company. All Rights Reserved.</div>
+</footer>
+<script src="assets/scripts/site.js"></script>
+</body>
+</html>

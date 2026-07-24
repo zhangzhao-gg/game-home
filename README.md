@@ -6,7 +6,7 @@
 
 ## 项目特点
 
-- 五页静态信息架构：首页负责导航，独立页面承载完整内容。
+- 八页静态信息架构：首页负责导航，公司、业务、新闻、投资者、两位高管与敌对人物页面承载完整内容。
 - 工业 HUD 视觉系统：深色界面、数据网格、遥测标签与克制的金色强调。
 - 原生响应式布局：覆盖桌面、平板与移动端，不依赖前端构建流程。
 - 渐进增强交互：移动导航、联系人复制和轻量视差均可在脚本失效时安全降级。
@@ -19,8 +19,11 @@
 | 首页 | `home.html` | 品牌总览、核心数据与全站入口 |
 | 公司概览 | `company.html` | 公司使命、运营原则与发展阶段 |
 | 业务与产线 | `business.html` | MGS、PE、SF 业务及纵向一体化流程 |
-| 公司动态 | `news.html` | 自动化、炼化、融资与园区进展 |
+| 公司动态 | `news.html` | 产业成型、化工扩张、降本增效、自动化、融资与园区进展 |
 | 投资者关系 | `investors.html` | 投资事实、投资人档案与长期战略 |
+| CEO 人物页 | `river-lee.html` | River-lee 的经营意志、决策原则与领导方式 |
+| 商业分析人物页 | `sumleruc.html` | sumleruc 的职责、分析方法与判断边界 |
+| 通缉档案页 | `jizhitangjiang.html` | 急支糖浆的宿敌关系、星际犯罪记录与追捕状态 |
 
 ## 技术栈
 
@@ -52,6 +55,9 @@ python3 -m http.server 8080
 ├── business.html
 ├── news.html
 ├── investors.html
+├── river-lee.html
+├── sumleruc.html
+├── jizhitangjiang.html
 ├── assets/
 │   ├── images/          # 本地 WebP 图片
 │   ├── scripts/         # Tailwind 主题与共享交互

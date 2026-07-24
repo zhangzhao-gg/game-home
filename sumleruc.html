@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<!--
+  [INPUT]: 依赖 Tailwind CDN、共享视觉/交互资产与 executive-sumleruc.webp 高管画像
+  [OUTPUT]: 提供高级商业分析师 sumleruc 的独立人物页，呈现职责、分析方法与判断边界
+  [POS]: 项目根目录的商业分析人物页，由首页领导团队卡片导流并与 CEO 人物页互补
+  [PROTOCOL]: 变更时更新此头部，然后检查 AGENTS.md
+-->
+
+<html class="dark" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>sumleruc｜高级商业分析师｜无限电报公司</title>
+<meta content="认识无限电报公司高级商业分析师 sumleruc：以商业模型、产能测算与市场验证支持长期经营判断。" name="description"/>
+<link href="https://infinite.okethan.com/sumleruc.html" rel="canonical"/>
+<link href="assets/images/favicon.webp" rel="icon" type="image/webp"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="assets/scripts/tailwind-config.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="assets/styles/site.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background selection:bg-tertiary/20">
+<header class="fixed inset-x-0 top-0 z-50 border-b border-outline-variant/30 bg-background/90 backdrop-blur-xl">
+<div class="mx-auto flex h-20 max-w-site items-center justify-between px-4 md:px-8 lg:px-16">
+<a class="flex items-center gap-2 font-display text-lg font-bold tracking-tight text-on-surface" href="home.html"><span class="material-symbols-outlined text-tertiary">hub</span>INFINITE TELEGRAPH</a>
+<nav aria-label="主导航" class="hidden items-center gap-7 font-mono text-xs uppercase tracking-wider md:flex">
+<a class="nav-link" href="home.html">Home</a><a class="nav-link" href="company.html">Company</a><a class="nav-link" href="business.html">Business</a><a class="nav-link" href="news.html">News</a><a class="nav-link" href="investors.html">Investors</a>
+</nav>
+<button aria-expanded="false" aria-label="打开导航" class="border border-outline-variant p-2 text-tertiary md:hidden" data-menu-toggle="sumleruc-main"><span class="material-symbols-outlined">menu</span></button>
+</div>
+<nav aria-label="移动导航" class="border-t border-outline-variant/30 bg-surface-container-low px-4 py-5 md:hidden" data-menu="sumleruc-main" hidden="hidden">
+<div class="grid gap-4 font-mono text-sm uppercase"><a class="nav-link" href="home.html">Home</a><a class="nav-link" href="company.html">Company</a><a class="nav-link" href="business.html">Business</a><a class="nav-link" href="news.html">News</a><a class="nav-link" href="investors.html">Investors</a></div>
+</nav>
+</header>
+
+<main class="pt-20">
+<!-- ==================== HERO / ANALYSIS ==================== -->
+<section class="relative overflow-hidden border-b border-outline-variant/30">
+<div class="absolute inset-0 bg-[linear-gradient(rgba(111,215,214,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(111,215,214,0.025)_1px,transparent_1px)] bg-[size:56px_56px]"></div>
+<div class="relative mx-auto grid min-h-[78vh] max-w-site items-center gap-16 px-4 py-20 md:grid-cols-12 md:px-8 lg:px-16">
+<div class="md:col-span-7">
+<p class="mb-7 font-mono text-xs uppercase tracking-[0.2em] text-tertiary">Business Analysis / SBA-02</p>
+<h1 class="display-title text-6xl text-on-surface md:text-8xl">sumleruc</h1>
+<p class="mt-5 font-mono text-sm uppercase tracking-[0.18em] text-primary">Senior Business Analyst</p>
+<p class="mt-10 max-w-2xl font-display text-2xl font-medium leading-snug text-on-surface md:text-4xl">先让数字说清楚，<br/><span class="text-tertiary">再让决策向前。</span></p>
+<p class="mt-8 max-w-2xl text-lg leading-8 text-on-surface-variant">负责商业模型、产能测算与市场信号分析。把复杂问题拆成可验证的假设，为每一次投入划出清晰边界。</p>
+</div>
+<div class="md:col-span-5">
+<figure class="overflow-hidden border border-outline-variant/50 bg-surface-container-low">
+<img alt="无限电报公司高级商业分析师 sumleruc 的像素角色高管画像" class="aspect-[4/5] w-full object-cover object-top" src="assets/images/executive-sumleruc.webp"/>
+<figcaption class="flex justify-between border-t border-outline-variant/50 p-4 font-mono text-xs uppercase tracking-wider text-on-surface-variant"><span>Analysis / Commercial</span><span class="text-tertiary">Verified</span></figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<!-- ==================== RESPONSIBILITY ==================== -->
+<section class="mx-auto max-w-site px-4 py-24 md:px-8 lg:px-16">
+<div class="grid gap-14 md:grid-cols-12">
+<div class="md:col-span-4"><p class="font-mono text-xs uppercase tracking-[0.2em] text-tertiary">Responsibility</p><h2 class="mt-5 display-title text-4xl md:text-5xl">职责很简单：<br/>减少错误判断。</h2></div>
+<div class="md:col-span-8">
+<dl class="divide-y divide-outline-variant/40 border-y border-outline-variant/40">
+<div class="grid gap-3 py-7 sm:grid-cols-12"><dt class="font-mono text-sm text-tertiary sm:col-span-4">01 / 商业模型</dt><dd class="leading-8 text-on-surface-variant sm:col-span-8">测算收入结构、成本敏感度与资本使用效率，让增长假设能够被检验。</dd></div>
+<div class="grid gap-3 py-7 sm:grid-cols-12"><dt class="font-mono text-sm text-tertiary sm:col-span-4">02 / 产能边界</dt><dd class="leading-8 text-on-surface-variant sm:col-span-8">连接需求、库存与生产节奏，识别扩张过快或供给不足的真实代价。</dd></div>
+<div class="grid gap-3 py-7 sm:grid-cols-12"><dt class="font-mono text-sm text-tertiary sm:col-span-4">03 / 市场信号</dt><dd class="leading-8 text-on-surface-variant sm:col-span-8">过滤短期价格噪声，寻找能够支持长期经营判断的稳定变量。</dd></div>
+</dl>
+</div>
+</div>
+</section>
+
+<!-- ==================== METHOD ==================== -->
+<section class="border-y border-outline-variant/30 bg-surface-container-low">
+<div class="mx-auto grid max-w-site gap-16 px-4 py-24 md:grid-cols-12 md:px-8 lg:px-16">
+<div class="md:col-span-5"><p class="font-mono text-xs uppercase tracking-[0.2em] text-tertiary">Working Method</p><h2 class="mt-5 font-display text-4xl font-semibold">不追求漂亮结论。</h2><p class="mt-6 max-w-lg leading-8 text-on-surface-variant">分析的价值不在于证明自己正确，而在于让团队更早看见风险、更清楚地使用资源。</p></div>
+<div class="grid gap-5 sm:grid-cols-3 md:col-span-7">
+<article class="border border-outline-variant/40 bg-background p-6"><p class="font-mono text-xs text-tertiary">OBSERVE</p><h3 class="mt-4 text-xl font-semibold">观察</h3><p class="mt-4 leading-7 text-on-surface-variant">先看数据如何变化，不急着解释。</p></article>
+<article class="border border-outline-variant/40 bg-background p-6"><p class="font-mono text-xs text-tertiary">VERIFY</p><h3 class="mt-4 text-xl font-semibold">验证</h3><p class="mt-4 leading-7 text-on-surface-variant">用多个来源交叉检查关键假设。</p></article>
+<article class="border border-outline-variant/40 bg-background p-6"><p class="font-mono text-xs text-tertiary">BOUND</p><h3 class="mt-4 text-xl font-semibold">定界</h3><p class="mt-4 leading-7 text-on-surface-variant">说明结论成立的条件与失效点。</p></article>
+</div>
+</div>
+</section>
+
+<!-- ==================== PRINCIPLE ==================== -->
+<section class="mx-auto max-w-4xl px-4 py-28 text-center md:px-8">
+<p class="font-mono text-xs uppercase tracking-[0.2em] text-tertiary">A Quiet Principle</p>
+<blockquote class="mt-8 font-display text-3xl font-medium leading-relaxed text-on-surface md:text-5xl">“没有证据支撑的乐观，<br/>只是尚未入账的风险。”</blockquote>
+<p class="mx-auto mt-8 max-w-2xl leading-8 text-on-surface-variant">少做声势判断，多做交叉验证。不追逐最响亮的机会，只寻找能够长期兑现的路径。</p>
+</section>
+
+<section class="border-t border-outline-variant/30 bg-surface-container-low">
+<div class="mx-auto flex max-w-site flex-col gap-8 px-4 py-20 md:flex-row md:items-center md:justify-between md:px-8 lg:px-16">
+<div><p class="font-mono text-xs uppercase tracking-[0.2em] text-tertiary">Executive Counterpart</p><h2 class="mt-3 font-display text-3xl font-semibold">冷静判断，服务明确行动。</h2></div>
+<a class="signal-link border border-secondary px-6 py-4 text-secondary hover:bg-secondary hover:text-on-secondary" href="river-lee.html">查看 CEO River-lee <span aria-hidden="true">→</span></a>
+</div>
+</section>
+</main>
+
+<footer class="border-t border-outline-variant/30 bg-surface-container-lowest">
+<div class="mx-auto grid max-w-site gap-10 px-4 py-14 md:grid-cols-12 md:px-8 lg:px-16"><div class="md:col-span-7"><p class="font-display text-lg font-bold">INFINITE TELEGRAPH</p><p class="mt-3 text-on-surface-variant">Industrial Realism in Deep Space Logistics.</p></div><div class="md:col-span-5 md:text-right"><a class="signal-link text-tertiary" href="home.html#leadership">返回领导团队 <span>→</span></a></div></div>
+<div class="border-t border-outline-variant/20 py-6 text-center font-mono text-xs text-on-surface-variant">© 2026 Infinite Telegraph Company. All Rights Reserved.</div>
+</footer>
+<script src="assets/scripts/site.js"></script>
+</body>
+</html>
