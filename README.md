@@ -18,8 +18,8 @@
 | --- | --- | --- |
 | 首页 | `home.html` | 品牌总览、核心数据与全站入口 |
 | 公司概览 | `company.html` | 公司使命、运营原则与发展阶段 |
-| 业务与产线 | `business.html` | MGS、PE、SF 业务及纵向一体化流程 |
-| 公司动态 | `news.html` | 产业成型、化工扩张、降本增效、自动化、融资与园区进展 |
+| 业务与产线 | `business.html` | MGS、MG、CL、EPO 四条产线及纵向一体化流程 |
+| 公司动态 | `news.html` | 聚合物产线、成员加入、产业成型、化工扩张、自动化、融资与园区进展 |
 | 投资者关系 | `investors.html` | 投资事实、投资人档案与长期战略 |
 | CEO 人物页 | `river-lee.html` | River-lee 的经营意志、决策原则与领导方式 |
 | 商业分析人物页 | `sumleruc.html` | sumleruc 的职责、分析方法与判断边界 |
