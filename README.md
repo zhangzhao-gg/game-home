@@ -6,7 +6,7 @@
 
 ## 项目特点
 
-- 九页静态信息架构：首页负责导航，公司、业务、新闻、投资者、重大资本动态、两位高管与敌对人物页面承载完整内容。
+- 十页静态信息架构：首页负责导航，公司、业务、新闻、投资者、公共事务、重大资本动态、两位高管与敌对人物页面承载完整内容。
 - 工业 HUD 视觉系统：深色界面、数据网格、遥测标签与克制的金色强调。
 - 原生响应式布局：覆盖桌面、平板与移动端，不依赖前端构建流程。
 - 渐进增强交互：移动导航、联系人复制和轻量视差均可在脚本失效时安全降级。
@@ -20,6 +20,7 @@
 | 公司概览 | `company.html` | 公司使命、运营原则与发展阶段 |
 | 业务与产线 | `business.html` | MGS、MG、CL、EPO 四条产线及纵向一体化流程 |
 | 公司动态 | `news.html` | 聚合物产线、成员加入、产业成型、化工扩张、自动化、融资与园区进展 |
+| BEN 议会竞选专题 | `river-lee-ben-election.html` | River-Lee 参选声明、BEN 人口与就业议题、经营履历及投票指引 |
 | 无限投资新闻稿 | `galadene-infinite-investment.html` | Galadene 追加 6M AIC、累计 10M AIC，并关注 SNG 社群中的散人玩家项目 |
 | 投资者关系 | `investors.html` | 投资事实、投资人档案与长期战略 |
 | CEO 人物页 | `river-lee.html` | River-lee 的经营意志、决策原则与领导方式 |
@@ -55,6 +56,7 @@ python3 -m http.server 8080
 ├── company.html
 ├── business.html
 ├── news.html
+├── river-lee-ben-election.html
 ├── galadene-infinite-investment.html
 ├── investors.html
 ├── river-lee.html

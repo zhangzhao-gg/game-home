@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <!--
-  [INPUT]: 依赖 Tailwind CDN、Google Fonts，以及 assets/images/ 下的本地页面位图
-  [OUTPUT]: 提供无限电报公司官网首页门户，展示核心摘要并导流公司、业务、新闻与投资者独立页面
+  [INPUT]: 依赖 Tailwind CDN、Google Fonts、共享视觉/交互资产，以及 assets/images/ 下的本地页面位图与竞选海报
+  [OUTPUT]: 提供无限电报公司官网首页门户，展示核心摘要并导流 River-Lee 竞选专题、公司、业务、新闻与投资者页面
   [POS]: 项目根目录的主页面入口，保留品牌总览并作为多页面信息架构的导航中心
   [PROTOCOL]: 变更时更新此头部，然后检查 AGENTS.md
 -->
@@ -100,7 +100,11 @@
                     "margin-mobile": "16px",
                     "unit": "8px"
             },
+            "maxWidth": {
+                    "site": "1440px"
+            },
             "fontFamily": {
+                    "display": ["Inter", "sans-serif"],
                     "label-md": ["JetBrains Mono"],
                     "body-md": ["Work Sans"],
                     "headline-lg": ["Inter"],
@@ -206,35 +210,21 @@
             border-left: 2px solid #e9c176;
         }
     </style>
+<link href="assets/styles/site.css" rel="stylesheet"/>
 </head>
 <body class="bg-background text-on-background hex-bg selection:bg-secondary/30">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/10">
-<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
-<a aria-label="返回首页" class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tighter flex items-center gap-2" href="#home">
-<span class="material-symbols-outlined text-secondary">hub</span>
-            INFINITE TELEGRAPH
-        </a>
-<div class="hidden md:flex items-center gap-8">
-<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 transition-colors duration-300" href="#home">Home</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="company.html">Profile</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="business.html">Business</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="business.html#pipeline">Layout</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="news.html">News</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="investors.html">Investors</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
-</div>
-<a class="hidden bg-secondary text-on-secondary px-6 py-2.5 font-label-md text-label-md uppercase tracking-wider hover:opacity-80 transition-opacity md:block" href="#contact">
-            Cooperation Inquiry
-        </a>
-<button aria-expanded="false" aria-label="打开导航" class="border border-outline-variant p-2 text-secondary md:hidden" data-menu-toggle="home-main" type="button"><span class="material-symbols-outlined">menu</span></button>
-</div>
-<div class="border-t border-outline-variant/30 bg-surface-container-low px-4 py-5 md:hidden" data-menu="home-main" hidden="hidden">
-<div class="grid gap-4 font-label-md text-label-md uppercase tracking-wider">
-<a class="text-secondary" href="#home">Home</a><a class="text-on-surface-variant" href="company.html">Company</a><a class="text-on-surface-variant" href="business.html">Business</a><a class="text-on-surface-variant" href="news.html">News</a><a class="text-on-surface-variant" href="investors.html">Investors</a><a class="text-on-surface-variant" href="#contact">Contact</a>
-</div>
-</div>
+<header class="fixed inset-x-0 top-0 z-50 border-b border-outline-variant/30 bg-background/90 backdrop-blur-xl">
+<div class="mx-auto flex h-20 max-w-site items-center justify-between px-4 md:px-8 lg:px-16">
+<a class="flex items-center gap-2 font-display text-lg font-bold tracking-tight text-on-surface" href="home.html"><span class="material-symbols-outlined text-secondary">hub</span>INFINITE TELEGRAPH</a>
+<nav aria-label="主导航" class="hidden items-center gap-7 font-mono text-xs uppercase tracking-wider md:flex">
+<a aria-current="page" class="nav-link" href="home.html">Home</a><a class="nav-link" href="company.html">Company</a><a class="nav-link" href="business.html">Business</a><a class="nav-link" href="news.html">News</a><a class="nav-link" href="investors.html">Investors</a>
 </nav>
+<button aria-expanded="false" aria-label="打开导航" class="border border-outline-variant p-2 text-secondary md:hidden" data-menu-toggle="main" type="button"><span class="material-symbols-outlined">menu</span></button>
+</div>
+<nav aria-label="移动导航" class="border-t border-outline-variant/30 bg-surface-container-low px-4 py-5 md:hidden" data-menu="main" hidden="hidden">
+<div class="grid gap-4 font-mono text-sm uppercase"><a aria-current="page" class="nav-link" href="home.html">Home</a><a class="nav-link" href="company.html">Company</a><a class="nav-link" href="business.html">Business</a><a class="nav-link" href="news.html">News</a><a class="nav-link" href="investors.html">Investors</a></div>
+</nav>
+</header>
 <main class="pt-20">
 <!-- Hero Section -->
 <section class="relative min-h-[90vh] flex items-center overflow-hidden tech-grid" id="home">
@@ -247,7 +237,7 @@
 <div class="md:col-span-8">
 <div class="flex flex-wrap gap-3 mb-8">
 <span class="bg-surface-container-highest/60 border border-secondary/30 px-4 py-1.5 font-label-sm text-label-sm uppercase tracking-widest text-secondary hud-border">CEO: River-lee</span>
-<span class="bg-surface-container-highest/60 border border-primary/30 px-4 py-1.5 font-label-sm text-label-sm uppercase tracking-widest text-primary">估值: 4,000万</span>
+<span class="bg-surface-container-highest/60 border border-primary/30 px-4 py-1.5 font-label-sm text-label-sm uppercase tracking-widest text-primary">估值: 1亿</span>
 <span class="bg-surface-container-highest/60 border border-tertiary/30 px-4 py-1.5 font-label-sm text-label-sm uppercase tracking-widest text-tertiary flex items-center gap-2">
 <span class="w-2 h-2 bg-tertiary rounded-full animate-pulse shadow-[0_0_8px_rgba(111,215,214,0.8)]"></span>
                         状态: 扩张中
@@ -279,8 +269,8 @@
 <div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-8 xl:gap-10 py-10" id="data-track">
 <div class="parallax-data min-w-0 flex flex-col" data-speed="0.05">
 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-tighter border-b border-outline-variant pb-2 mb-4">Market Valuation</span>
-<span class="font-headline-lg text-headline-lg text-secondary">4,000万</span>
-<span class="font-label-sm text-label-sm text-outline mt-2">MKT.VAL // 0x4F2A</span>
+<span class="font-headline-lg text-headline-lg text-secondary">1亿</span>
+<span class="font-label-sm text-label-sm text-outline mt-2">MKT.VAL // 100M</span>
 </div>
 <div class="parallax-data min-w-0 flex flex-col" data-speed="-0.03">
 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-tighter border-b border-outline-variant pb-2 mb-4">Operations Head</span>
@@ -559,11 +549,18 @@
 <div class="md:col-span-7 lg:col-span-8">
 <h2 class="font-headline-lg text-headline-lg mb-12">公司动态</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-<a class="group relative block" href="galadene-infinite-investment.html">
+<a class="group relative block" href="river-lee-ben-election.html">
 <div class="mb-4 overflow-hidden border border-secondary/50">
+<img alt="River-Lee 参加 BEN 议会选举宣传海报" class="w-full aspect-video object-cover object-[center_24%] group-hover:scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100" src="assets/images/poster-river-lee-ben-election.webp"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">2026.07.31 / NEW</span>
+<h3 class="font-headline-sm text-headline-sm mt-2 group-hover:text-primary transition-colors">River-Lee 正式参选 BEN 议会</h3>
+</a>
+<a class="group relative block" href="galadene-infinite-investment.html">
+<div class="mb-4 overflow-hidden border border-outline-variant/30">
 <img alt="Galadene 开启无限投资活动并追加注资 6M AIC" class="w-full aspect-video object-cover object-top group-hover:scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100" src="assets/images/executive-galadene.webp?v=20260726-2"/>
 </div>
-<span class="font-label-sm text-label-sm text-secondary">2026.07.28 / NEW</span>
+<span class="font-label-sm text-label-sm text-secondary">2026.07.28</span>
 <h3 class="font-headline-sm text-headline-sm mt-2 group-hover:text-primary transition-colors">Galadene 开启无限投资活动，追加注资 6M</h3>
 </a>
 <a class="group relative block" href="news.html#sumleruc-planet-search">
@@ -579,13 +576,6 @@
 </div>
 <span class="font-label-sm text-label-sm text-secondary">2026.07.26</span>
 <h3 class="font-headline-sm text-headline-sm mt-2 group-hover:text-primary transition-colors">4 个聚合物生产厂正式落地，EPO 产线启用</h3>
-</a>
-<a class="group relative block" href="news.html#galadene-joins">
-<div class="mb-4 overflow-hidden border border-outline-variant/30">
-<img alt="无限电报集团新成员 Galadene" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100" src="assets/images/investor-galadene.webp"/>
-</div>
-<span class="font-label-sm text-label-sm text-secondary">2026.07.26</span>
-<h3 class="font-headline-sm text-headline-sm mt-2 group-hover:text-primary transition-colors">PURN 超级玩家 Galadene 加入无限电报集团</h3>
 </a>
 </div>
 </div>
