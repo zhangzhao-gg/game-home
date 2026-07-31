@@ -12,6 +12,7 @@ executive-sumleruc.webp: 首页领导团队区高级商业分析师 sumleruc 像
 executive-galadene.webp: 首页关键人物区投资人 Galadene 高清重绘肖像，保留橙发金瞳、饮品与资源吉祥物，1003×1568 压缩 WebP。
 wanted-jizhitangjiang.webp: 急支糖浆独立通缉页的黄猫逃犯画像，900×1501 压缩 WebP。
 investor-galadene.webp: 投资者关系区个人投资人加拉迪恩头像，640×640 压缩 WebP。
+poster-river-lee-ben-election.webp: River-Lee 参加 BEN 议会选举的蓝金竖版海报，突出候选人、融资与估值信息，1122×1402 压缩 WebP。
 news-mgs.webp: MGS 自动化升级新闻配图，512×279 压缩 WebP。
 news-sf.webp: SF 炼化产值新闻配图，512×286 压缩 WebP。
 news-funding.webp: 首轮融资新闻配图，512×279 压缩 WebP。
